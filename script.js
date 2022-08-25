@@ -143,7 +143,7 @@ function tocarMusica(urlmusica, imagem, musica, artista) {
 
 /* ----- pula para a próxima faixa de música seguindo a ordem ----- */
 document.querySelector('#next').addEventListener('click', () => {
-  let check = document.querySelector
+  let check = document.querySelector("#checkbox-random");
   if(check.checked) {
     positionMusic = rand(0, music_playlist.length)
   } else {
@@ -160,7 +160,8 @@ document.querySelector('#next').addEventListener('click', () => {
 
 /* ----- volta para a ultima faixa de música seguindo a ordem ----- */
 document.querySelector('#previous').addEventListener('click', () => {
-    if($("#checkbox-random").prop("checked")) {
+    let check = document.querySelector("#checkbox-random");
+    if(check.checked) {
       positionMusic = rand(0, music_playlist.length)
     } else {
       positionMusic--;
