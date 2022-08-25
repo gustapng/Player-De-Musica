@@ -143,7 +143,8 @@ function tocarMusica(urlmusica, imagem, musica, artista) {
 
 /* ----- pula para a próxima faixa de música seguindo a ordem ----- */
 document.querySelector('#next').addEventListener('click', () => {
-  if($("#checkbox-random").prop("checked")) {
+  let check = document.querySelector
+  if(check.checked) {
     positionMusic = rand(0, music_playlist.length)
   } else {
     positionMusic++;
